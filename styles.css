@@ -1,0 +1,245 @@
+:root {
+  color-scheme: light;
+  --paper: #f5f3ec;
+  --ink: #282e29;
+  --muted: #62695f;
+  --green: #315b4c;
+  --line: #d8dbd0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 5px;
+}
+
+.page {
+  width: 100%;
+  max-width: 1504px;
+  margin: auto;
+  padding: 0 clamp(16px, 3.2vw, 48px);
+}
+
+.intro {
+  padding: clamp(24px, 3vw, 42px) 0 26px;
+}
+
+h1 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(28px, 3.2vw, 44px);
+  font-weight: 400;
+  letter-spacing: -.8px;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+h2 {
+  margin: 0;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.about-copy {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.about p {
+  min-width: 0;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.map-card {
+  min-width: 0;
+  border: 1px solid #c9cec3;
+  background: #fff;
+}
+
+.map-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--line);
+  background: #fbfaf6;
+}
+
+.map-hint {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  background: var(--green);
+  border-radius: 50%;
+}
+
+#status {
+  min-width: 0;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: right;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+#status[data-state="error"] {
+  color: #9b3c30;
+}
+
+arcgis-map {
+  display: block;
+  width: 100%;
+  height: clamp(420px, 67vh, 800px);
+  height: clamp(420px, 67svh, 800px);
+  background: #e7e9e2;
+  --arcgis-font-family: Arial, Helvetica, sans-serif;
+  --calcite-color-brand: #315b4c;
+  --calcite-color-brand-hover: #254638;
+  --calcite-color-brand-press: #1f392e;
+}
+
+arcgis-legend {
+  max-width: min(280px, 65vw);
+  max-height: 150px;
+  overflow: auto;
+}
+
+.notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 20px;
+  padding: 16px 0 24px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.notes > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.venue-details {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.venue-details dt {
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.venue-details dd {
+  margin: 4px 0 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 1000px) {
+  .about {
+    grid-template-columns: 115px minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .about-copy {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .intro {
+    padding-bottom: 20px;
+  }
+
+  h1 {
+    letter-spacing: -.5px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 20px;
+    padding-top: 16px;
+  }
+
+  .about-copy {
+    gap: 10px;
+  }
+
+  .map-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 12px;
+  }
+
+  #status {
+    text-align: left;
+  }
+
+  arcgis-map {
+    height: 62vh;
+    height: 62svh;
+    min-height: 360px;
+  }
+
+  arcgis-legend {
+    max-height: 110px;
+  }
+
+  .notes {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  arcgis-map {
+    height: 85vh;
+    min-height: 280px;
+  }
+}

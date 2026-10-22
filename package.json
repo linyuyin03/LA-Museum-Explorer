@@ -1,0 +1,7 @@
+﻿{
+  "name": "la-museum-explorer",
+  "private": true,
+  "scripts": {
+    "start": "node server.cjs"
+  }
+}
