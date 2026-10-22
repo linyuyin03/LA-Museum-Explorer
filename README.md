@@ -34,7 +34,7 @@ I added the Home component to return users to the initial Los Angeles view after
 
 Some records lack addresses or cities. The popup labels missing values "Not provided by source." The service reports a broad extent, so the app uses a fixed starting view. Future work would check coordinates against venue websites and add a city filter.
 
-API requests and JavaScript syntax were checked. The automated preview browser lacked WebGL2 support, so map interactions still need testing in normal and incognito browser windows.
+I tested the published GitHub Pages site. The map and museum markers load correctly. Clicking a marker displays the venue details. The zoom controls work, and the Home component returns the map to its initial view. The legend also displays correctly.
 
 ## Credits (data, sample, and AI tools)
 
