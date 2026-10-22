@@ -41,9 +41,3 @@ I tested the published GitHub Pages site. The map and museum markers load correc
 Los Angeles County provides the data. Esri provides the SDK, basemap, components, and starting sample.
 
 I used ChatGPT mainly for debugging when the museum points did not appear on the map. It helped me understand how `FeatureLayer` loads data from the county's ArcGIS REST API. The debugging focused on the service URL, attribute fields, and the sequence for adding the layer after the map was ready. The final code requests the museum records, applies a category filter, and displays them with a custom renderer. ChatGPT also helped polish this README.
-
-## Run locally
-
-Run `npm start` in the project folder, then open http://127.0.0.1:3000 in your browser. Node.js is required. No dependency installation is needed.
-
-Keep the terminal running while using the app. An internet connection is required for the ArcGIS SDK, basemap, and county data.
