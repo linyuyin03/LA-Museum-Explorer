@@ -3,7 +3,7 @@
   --paper: #f5f3ec;
   --ink: #282e29;
   --muted: #62695f;
-  --green: #315b4c;
+  --green: #7545eb;
   --line: #d8dbd0;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -136,9 +136,9 @@ arcgis-map {
   height: clamp(420px, 67svh, 800px);
   background: #e7e9e2;
   --arcgis-font-family: Arial, Helvetica, sans-serif;
-  --calcite-color-brand: #315b4c;
-  --calcite-color-brand-hover: #254638;
-  --calcite-color-brand-press: #1f392e;
+  --calcite-color-brand: #7545eb;
+  --calcite-color-brand-hover: #6336d0;
+  --calcite-color-brand-press: #5129b5;
 }
 
 arcgis-legend {
